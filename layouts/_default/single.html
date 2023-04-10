@@ -1,4 +1,5 @@
 {{ define "main" }}
+{{ if eq .Type "posts" }}{{ if not .Params.menu }}
 <h1>{{ .Title }}</h1>
 <p>
   <i>
@@ -7,6 +8,7 @@
     </time>
   </i>
 </p>
+{{ end }}{{ end }}
 <content>
   {{ .Content }}
 </content>
